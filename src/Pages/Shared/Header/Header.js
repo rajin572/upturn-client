@@ -24,6 +24,16 @@ const Header = () => {
           <Nav className="me-auto">
             <Link className="a" to='/home'>Home</Link>
             <Link className="a" to='/services'>Services</Link>
+            {
+              user?.uid? 
+              <>
+              <Link className="a">My Reviews</Link>
+              <Link className="a">Add Service</Link>
+              </>
+              :
+              <>
+              </>
+            }
             <Link className="a" to='/blog'>Blog</Link>
           </Nav>
           <Nav>
