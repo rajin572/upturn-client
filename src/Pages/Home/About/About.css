@@ -1,3 +1,38 @@
-.AboutDetails{
+.aboutSection{
     background-color: rgb(246, 246, 247);
+    padding: 50px 0px;
+}
+.aboutSection h2{
+    margin: 20px 0px 50px;
+    text-align: center;
+}
+.text{
+    color: #017dc3;
+    font-weight: bold;
+}
+.aboutGrid{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    grid-gap: 50px;
+    padding: 30px;
+}
+.aboutCardText{
+    margin: 20px 0px;
+}
+.aboutCard img{
+    width: 40%;
+}
+@media only screen and (max-width: 991px) {
+    .aboutGrid{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        grid-gap: 50px;
+        padding: 30px;
+    }
 }

@@ -1,0 +1,16 @@
+.GuaranteeSection{
+    width: 90%;
+    margin: 50px  auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+.GuaranteeSection span{
+    color: #017dc3;
+}
+@media only screen and (max-width: 991px) {
+    .GuaranteeSection{
+        flex-direction: column;
+    }
+}
