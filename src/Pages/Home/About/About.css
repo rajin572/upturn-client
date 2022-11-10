@@ -25,7 +25,7 @@
 .aboutCard img{
     width: 40%;
 }
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 768px) {
     .aboutGrid{
         width: 90%;
         margin: auto;

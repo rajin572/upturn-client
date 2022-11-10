@@ -9,7 +9,7 @@
 .GuaranteeSection span{
     color: #017dc3;
 }
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 768px) {
     .GuaranteeSection{
         flex-direction: column;
     }

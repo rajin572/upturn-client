@@ -1,14 +1,22 @@
 import React from 'react';
+import { Button, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
-const ServiceCard = () => {
+const ServiceCard = ({service}) => {
+    console.log(service);
+    const {_id,img, description, price, title} = service
     return (
-        <div className='serviceCard'>
-            <img src="https://images.squarespace-cdn.com/content/v1/532e1a95e4b00cf211b5a8bf/1447376989865-OBHQHJI0V1IIFX0E6IIA/pay_bills_online?format=1000w" alt="" />
-            <div>
-                <h3>Bill paying services</h3>
-            </div>
-            <button>View more</button>
-        </div>
+        <Card>
+        <Card.Img variant="top" src={img} />
+        <Card.Body className='px-1'>
+          <Card.Title> <h3>{title}</h3> </Card.Title>
+          <Card.Text className='px-0 mt-3 text-secondary'>
+            {description.slice(0,100)}...
+          </Card.Text>
+          <h3>Price: {price}</h3>
+          <Link to={`/services/${_id}`}><Button variant="primary" className='w-100 mt-3'>View Details</Button></Link>
+        </Card.Body>
+      </Card>
     );
 };
 

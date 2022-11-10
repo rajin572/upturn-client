@@ -1,0 +1,13 @@
+.serviceSection{
+    margin: 50px 0px;
+}
+.serviceSection h1{
+    color: #017dc3;
+}
+.serviceCard{
+    width: 90%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+}

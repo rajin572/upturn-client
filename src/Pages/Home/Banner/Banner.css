@@ -20,7 +20,7 @@
 .bannerImg img{
     width: 100%;
 }
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 768px) {
     .banner{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
