@@ -18,7 +18,6 @@ const ShowServiceReview = ({data}) => {
                 {
                     reviewData.length > 0 ?
                     <>
-                    <p>Reviews: {reviewData.length}</p>
                     <div>
                         {
                             reviewData.map(review => <ShowReviewCard key={review._id} review={review} ></ShowReviewCard>)

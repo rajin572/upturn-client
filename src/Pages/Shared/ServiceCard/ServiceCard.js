@@ -22,7 +22,7 @@ const ServiceCard = ({ service }) => {
         <Card.Text className="px-0 mt-3 text-secondary">
           {description.slice(0, 100)}...
         </Card.Text>
-        <h3>Price: {price}</h3>
+        <h3>Price: ${price}</h3>
         <Link to={`/services/${_id}`}>
           <Button variant="primary" className="w-100 mt-3">
             View Details

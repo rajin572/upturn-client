@@ -1,10 +1,4 @@
-.serviceSection{
-    margin: 50px 0px;
-}
-.serviceSection h1{
-    color: #017dc3;
-}
-.serviceCard{
+.reviewCard{
     width: 90%;
     margin: 50px auto;
     display: grid;
@@ -12,7 +6,7 @@
     grid-gap: 50px;
 }
 @media only screen and (max-width: 991px) {
-    .serviceCard{
+    .reviewCard{
         grid-template-columns: repeat(1, 1fr);
     }
 }
