@@ -1,0 +1,44 @@
+.addReview{
+    width: 90%;
+    margin:50px auto;
+    background-color: rgba(0, 217, 255, 0.2);
+    padding: 50px;
+}
+.reviewInput{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin: 50px 0px;
+}
+.reviewInput label{
+    font-weight: bold;
+}
+.reviewInput input{
+    padding: 10px;
+    width: 100%;
+}
+.submitBtn{
+    display: block;
+    width: 100%;
+    padding: 10px 0px;
+    margin-top: 20px;
+    background-color: #017dc3;
+    border: 2px solid #017dc3;
+    color: white;
+    border-radius: 5px;
+}
+.textarea{
+    width: 100%;
+    padding:10px;
+}
+@media only screen and (max-width: 991px) {
+    .reviewInput{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .addReview{
+        width: 95%;
+        margin:50px auto;
+        background-color: rgba(0, 217, 255, 0.2);
+        padding: 30px;
+    }
+}
