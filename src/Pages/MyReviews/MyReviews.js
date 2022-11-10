@@ -28,7 +28,7 @@ const MyReviews = () => {
                 if (data.deletedCount > 0){
                     const remaining = reviewData.filter(odr => odr._id !== id);
                     setReviewData(remaining);
-                    
+                    toast.success('Your Review Has Been Successfully Deleted!');
                 }
             })
         }
