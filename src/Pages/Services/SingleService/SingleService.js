@@ -9,7 +9,7 @@ import ShowServiceReview from "./ShowServiceReview/ShowServiceReview";
 const SingleService = () => {
   const data = useLoaderData();
   console.log(data);
-  const { _id, img, description, price, title } = data;
+  const { img, description, price, title } = data;
   return (
     <div className="singleService">
       <div className="singleServiceData">

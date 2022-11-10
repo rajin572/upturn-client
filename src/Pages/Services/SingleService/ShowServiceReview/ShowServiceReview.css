@@ -1,0 +1,14 @@
+.reviewAll{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    grid-gap: 30px;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: rgba(194, 194, 194, 0.262);
+}
+.reviewAll img{
+    width: 30%;
+}

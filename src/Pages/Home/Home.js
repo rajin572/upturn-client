@@ -14,7 +14,6 @@ const Home = () => {
             <About></About>
             <LimitedService></LimitedService>
             <Guarantee></Guarantee>
-            <Footer></Footer>
         </div>
     );
 };

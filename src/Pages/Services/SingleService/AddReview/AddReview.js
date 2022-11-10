@@ -4,6 +4,7 @@ import { AuthContext } from '../../../../context/AuthProvider';
 import './AddReview.css'
 
 const AddReview = ({data}) => {
+    
     const {user} = useContext(AuthContext)
     const { _id, title, price, img } = data;
 
@@ -12,6 +13,7 @@ const AddReview = ({data}) => {
         const form = event.target;
         const name = `${form.firstName.value} ${form.lastName.value}`;
         const email = user?.email || 'unregistered';
+        const customerImage = user?.photoURL || form.PhotoUrl.value
         const phone = form.phone.value;
         const message = form.message.value;
 
@@ -20,13 +22,12 @@ const AddReview = ({data}) => {
             serviceName: title,
             price,
             customer: name,
-            customerImage: user.photoURL,
+            customerImage,
             email,
             phone,
             message,
             img
         }
-        console.log(review);
 
 
         // }
@@ -44,7 +45,6 @@ const AddReview = ({data}) => {
                 if(data.acknowledged){
                     alert('Order placed successfully')
                     form.reset();
-                    
                 }
             })
             .catch(er => console.error(er));
@@ -71,13 +71,17 @@ const AddReview = ({data}) => {
                         <label className='d-block' htmlFor="email">Your email</label>
                         <input id='email' name="email" type="text" placeholder="Your email" defaultValue={user?.email} readOnly />
                     </div>
+                    <div>
+                        <label className='d-block' htmlFor="PhotoUrl">Your PhotoUrl</label>
+                        <input id='PhotoUrl' name="PhotoUrl" type="text" placeholder="Your PhotoUrl" defaultValue={user?.photoURL} readOnly />
+                    </div>
                 </div>
                 <textarea name="message" className="textarea" placeholder="Your Message" required></textarea>
 
                 <div>
                     {
                     user?.uid ? 
-                    <input className='submitBtn' type="submit" value="Place Your Order" />
+                    <button className='submitBtn' type="submit">Add Your Review</button>
                     :
                     <>
                         <div className='warning'>

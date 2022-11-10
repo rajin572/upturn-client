@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ShowReviewCard from './ShowReviewCard';
 
 const ShowServiceReview = ({data}) => {
     const [reviewData, setReviewData] = useState([])
@@ -6,18 +7,28 @@ const ShowServiceReview = ({data}) => {
     useEffect(() => {
         fetch(`http://localhost:5000/reviews?service=${_id}`)
         .then(res => res.json())
-        .then(data => setReviewData(data))
+        .then(data => {
+            setReviewData(data)
+        })
     },[_id])
     return (
         <div>
-            <h1>
+            <h1 className='text-center'>All Reviews</h1>
+            <div>
                 {
                     reviewData.length > 0 ?
+                    <>
                     <p>Reviews: {reviewData.length}</p>
+                    <div>
+                        {
+                            reviewData.map(review => <ShowReviewCard key={review._id} review={review} ></ShowReviewCard>)
+                        }
+                    </div>
+                    </>
                     :
-                    <p>No data Found</p>
+                    <p className='warningMassage text-center'>No Review Yet</p>
                 }
-            </h1>
+            </div>
         </div>
     );
 };
