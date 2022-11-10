@@ -68,7 +68,7 @@ const Login = () => {
             placeholder="Password"
           />
         </Form.Group>
-        <Form.Text className="my-5">Haven't Any Account ? <Link to='/register'>Please Register</Link></Form.Text>
+        <Form.Text className="my-5">Haven't Any Account ? <Link to='/signup'>Please Register</Link></Form.Text>
         <br />
         <Form.Text className="text-danger">{error}</Form.Text>
         <br />
