@@ -5,7 +5,7 @@ const ShowServiceReview = ({data}) => {
     const [reviewData, setReviewData] = useState([])
     const { _id } = data;
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?service=${_id}`)
+        fetch(`https://upturn-server.vercel.app/reviews?service=${_id}`)
         .then(res => res.json())
         .then(data => {
             setReviewData(data)

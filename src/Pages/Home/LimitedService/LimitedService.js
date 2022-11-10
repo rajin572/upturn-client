@@ -7,7 +7,7 @@ const LimitedService = () => {
     const [services, setService] = useState([])
 
     useEffect(() =>{
-        fetch('http://localhost:5000/limitServices')
+        fetch('https://upturn-server.vercel.app/limitServices')
         .then(res => res.json())
         .then(data => setService(data))
     },[])
