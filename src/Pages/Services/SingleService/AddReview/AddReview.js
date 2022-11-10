@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../../context/AuthProvider';
 import './AddReview.css'
@@ -43,7 +44,7 @@ const AddReview = ({data}) => {
             .then(data => {
                 console.log(data)
                 if(data.acknowledged){
-                    alert('Order placed successfully')
+                    toast.success('Successfully created!');
                     form.reset();
                 }
             })
