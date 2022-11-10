@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 
 const ShowServiceReview = ({data}) => {
     const [reviewData, setReviewData] = useState([])
-    const { _id, title, price, img } = data;
+    const { _id } = data;
     useEffect(() => {
         fetch(`http://localhost:5000/reviews?service=${_id}`)
         .then(res => res.json())
         .then(data => setReviewData(data))
-    },[])
+    },[_id])
     return (
         <div>
             <h1>

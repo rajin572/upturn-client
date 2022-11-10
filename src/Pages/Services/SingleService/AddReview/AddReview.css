@@ -31,6 +31,21 @@
     width: 100%;
     padding:10px;
 }
+.warning{
+    text-align: center;
+}
+.warningMassage{
+    color: rgb(249, 59, 59);
+    margin-top: 30px;
+}
+.warning button{
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #017dc3;
+    border: 2px solid #017dc3;
+    color: white;
+    border-radius: 5px;
+}
 @media only screen and (max-width: 991px) {
     .reviewInput{
         grid-template-columns: repeat(1, 1fr);
