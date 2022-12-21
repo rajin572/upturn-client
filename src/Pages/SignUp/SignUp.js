@@ -35,6 +35,8 @@ const SignUp = () => {
             })
   }
 
+
+
   const handleUpdateUserProfile = (name, photoURL)  =>{
     const profile = {
         displayName:name,
@@ -53,6 +55,7 @@ const SignUp = () => {
   return (
     <Container>
     <h2 className="text-center my-5">Welcome To Register Page</h2>
+      <div className="authentication">
       <Form onSubmit={handleregister}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Your Name</Form.Label>
@@ -85,10 +88,11 @@ const SignUp = () => {
         <br />
         <Form.Text className="text-danger">{error}</Form.Text>
         <br />
-        <Button variant="primary" type="submit" disabled={!accepted}>
+        <Button className="d-block w-100" variant="primary" type="submit" disabled={!accepted}>
           Submit
         </Button>
       </Form>
+      </div>
     </Container>
   );
 };

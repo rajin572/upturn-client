@@ -1,0 +1,21 @@
+.authentication{
+    width: 40%;
+    margin: auto;
+    padding: 20px;
+    background-color: rgb(245, 245, 245);
+    border: 2px solid rgb(158, 158, 158);
+    box-shadow: 0px 5px 5px rgb(158, 158, 158);
+    border-radius: 14px;
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 991px) {
+    .authentication{
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 590px) {
+    .authentication{
+        width: 90%;
+    }
+}
