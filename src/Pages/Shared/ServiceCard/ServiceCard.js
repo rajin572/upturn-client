@@ -9,7 +9,7 @@ const ServiceCard = ({ service }) => {
   console.log(service);
   const { _id, img, description, price, title } = service;
   return (
-    <Card className="">
+    <Card>
       <PhotoProvider>
         <PhotoView src={img}>
           <Card.Img variant="top" src={img} />

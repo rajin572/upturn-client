@@ -10,8 +10,6 @@ const ShowReviewCard = ({review}) => {
             <div>
                 <b>Name:</b> 
                 <p>{customer}</p>
-                <b>Email:</b>
-                <p>{email}</p>
             </div>
             <div className='reviewMassage'>
                 <b>Review:</b>

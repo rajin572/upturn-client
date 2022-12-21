@@ -35,7 +35,9 @@ const AddServices = () => {
       .catch((er) => console.error(er));
   };
   return (
-    <div className="addReview">
+    <div>
+      <h1 className="text-center">Add Service</h1>
+      <div className="addReview">
       <form onSubmit={handlePlaceServices}>
         <div className="reviewInput">
           <div>
@@ -62,7 +64,7 @@ const AddServices = () => {
               required
             />
           </div>
-          <div>
+          <div className="photourl">
             <label className="d-block" htmlFor="photoUrl">
               Photo URL
             </label>
@@ -88,6 +90,7 @@ const AddServices = () => {
           </button>
         </div>
       </form>
+    </div>
     </div>
   );
 };

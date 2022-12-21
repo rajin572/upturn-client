@@ -1,0 +1,8 @@
+.card-posstion{
+    position: relative;
+}
+.button-possition{
+    position: absolute;
+    bottom: 0;
+    margin-top: 10px;
+}

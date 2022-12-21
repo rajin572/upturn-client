@@ -9,11 +9,13 @@ const MyReviews = () => {
     useTitle('myreviwes')
     const {user} = useContext(AuthContext)
     const [reviewData, setReviewData] = useState([])
+    const [loading, isLoading] = useState(true)
     useEffect(() => {
         fetch(`https://upturn-server.vercel.app/reviews?email=${user?.email}`)
         .then(res => res.json())
         .then(data => {
             setReviewData(data)
+            isLoading(false)
         })
     },[user?.email])
 
@@ -38,14 +40,21 @@ const MyReviews = () => {
             <h2 className='text-center'>My All Reviews: {reviewData.length}</h2>
             <div>
                 {
-                    reviewData.length > 0 ?
-                    <div className='reviewCard'>
+                    loading ? <div className='text-center'>
+                        <div class="spinner-border text-dark text-center" role="status"></div>
+                    </div> :
+                    <div>
                     {
-                        reviewData.map(reviews => <ReviewCard key={reviews._id} reviews={reviews} handleDelete={handleDelete}></ReviewCard>)
+                        reviewData.length > 0 ?
+                        <div className='reviewCard'>
+                        {
+                            reviewData.map(reviews => <ReviewCard key={reviews._id} reviews={reviews} handleDelete={handleDelete}></ReviewCard>)
+                        }
+                        </div>
+                        :
+                        <h3 className='warningMassage text-center'>You Haven't Any Review</h3>
                     }
-                    </div>
-                    :
-                    <h3 className='warningMassage text-center'>You Haven't Any Review</h3>
+                </div>
                 }
             </div>
         </div>

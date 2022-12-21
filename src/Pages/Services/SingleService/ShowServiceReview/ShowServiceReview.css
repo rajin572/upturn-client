@@ -4,13 +4,14 @@
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-content: center;
-    grid-gap: 30px;
+    grid-gap: 0px;
     padding: 10px;
     margin: 10px auto;
     background-color: rgba(194, 194, 194, 0.262);
 }
 .reviewAll img{
-    width: 30%;
+    width: 100px;
+    height: 100px;
 }
 @media only screen and (max-width: 991px) {
     .reviewAll{
@@ -25,14 +26,15 @@
         background-color: rgba(194, 194, 194, 0.262);
     }
     .reviewAll img{
-        width: 50%;
+        width: 80px;
+        height: 80px;
     }
 }
 @media only screen and (max-width: 551px) {
     .reviewAll{
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         align-items: center;
         justify-content: center;
         grid-gap: 5px;
@@ -40,12 +42,16 @@
         margin: 10px auto;
         background-color: rgba(194, 194, 194, 0.262);
     }
+    p, b{
+        font-size: 14px;
+    }
     .reviewAll img{
-        width: 100%;
+        width: 50px;
+        height: 50px;
     }
     .reviewMassage{
         margin-top: 10px;
         text-align: center;
-        grid-column: 1 / span 2;
     }
+
 }
