@@ -6,8 +6,7 @@ import './Services.css'
 
 const Services = () => {
     useTitle('services')
-    const data = useLoaderData()
-    console.log(data);
+
     return (
         <div className='serviceSection'>
             <h1 className='text-center'>Services</h1>
